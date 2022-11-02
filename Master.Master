@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="tp_webforms_gottig_ramirez.Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Virtual Shop Web</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <%-- Agrego Icons --%>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <%-- Fuentes de Google --%>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,600&display=swap" rel="stylesheet">
+    <%-- Hoja de estilos personalizada --%>
+    <link href="Styles/styles.css" rel="stylesheet" />
+    <%-- Implementacion de Bootstrap --%>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <%-- Barra de navegacion --%>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand title" href="Home.aspx">Virtual Shop</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active item-nav" aria-current="page" href="#">Inicio</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row" style="width: 350px;">
+                        <div class="col-6 dropstart p-0" style="width: 130px">
+                            <a class="btn btn-success icon-favoritos" data-bs-toggle="offcanvas" href="#offcanvasCarrito" role="button" aria-controls="offcanvasCarritoLabel">
+                                <i class="uil uil-shopping-cart"></i>Carrito</a>
+                        </div>
+                        <div class="col-6 p-0">
+                            <a class="btn btn-danger icon-favoritos" data-bs-toggle="offcanvas" href="#offcanvasFavoritos" role="button" aria-controls="offcanvasFavoritoLabel">
+                                <i class="uil uil-heart-alt"></i>Mis Favoritos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <%-- Fin Barra de navegacion --%>
+
+            <%-- Desarrollo OffCanvas --%>
+
+            <%-- Fin Barra de navegacion --%>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer class="bg-dark text-white text-center text-lg-start mt-5">
+
+            <div class="container p-4">
+
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0 text-center">
+                        <h5 class="text-uppercase">Web Desarrollada por: </h5>
+
+                        <p>
+                            Proyecto realizado para la materia Programación III.
+                        </p>
+                        <p>
+                           Universidad Tecnológica Nacional FRGP
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-center">
+                        <h5 class="text-uppercase mb-2">Gottig, Marianella</h5>
+                        <ul class="list-unstyled mb-0 text-center">
+                            <li>
+                                <a href="https://www.linkedin.com/in/marianella-gottig-93a7a7239/" class="text-white">
+                                    <img src="https://w7.pngwing.com/pngs/808/657/png-transparent-app-linkedin-logo-media-popular-social-web-2018-social-media-app-logos-icon.png" alt="logo-lkn" style="width:15%"/>
+                                   </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-center">
+                        <h5 class="text-uppercase mb-2">Ramirez, Emiliano</h5>
+                        <ul class="list-unstyled mb-0 text-center">
+                            <li>
+                                <a href="https://www.linkedin.com/in/emiliano-ramirez/" class="text-white">
+                                    <img src="https://w7.pngwing.com/pngs/808/657/png-transparent-app-linkedin-logo-media-popular-social-web-2018-social-media-app-logos-icon.png" alt="logo-lkn" style="width:15%"/>
+                                   </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2022 Copyright - 
+    <a class="text-white" href="https://github.com/Emi-R/tp-webforms-gottig-ramirez">Mostrame el Repositorio!</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </form>
+    <%-- Desarrollo OffCanvas --%>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
